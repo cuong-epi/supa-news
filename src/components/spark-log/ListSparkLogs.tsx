@@ -146,7 +146,7 @@ export default function ListSparkLogs() {
               <Button type="primary" onClick={() => openFormDialog()}>Add Spack</Button>
           </Space>
          <Table 
-           rowKey="_id"
+            rowKey="_id"
             columns={columns} 
             dataSource={logs}
             pagination={{position: ["bottomCenter"], pageSize: pagination.pageSize, current: pagination.pageIndex, total: pagination.totalRecords, onChange(page, _) {

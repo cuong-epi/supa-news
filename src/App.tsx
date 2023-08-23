@@ -17,6 +17,9 @@ import ListLotteryConfigs from "./components/lottery/ListLotteries";
 import ListTransLogs from "./components/trans/ListTransLogs";
 import ListTopRefer from "./components/user-refer/ListTopRefer";
 import ListTopSparkBalance from "./components/spark-balance/ListTopSparkBalance";
+import ListCheckInByDay from "./components/checkin-by-day/ListCheckInByDay";
+import ListRegisterByDay from "./components/register-by-day/ListRegisterByDay";
+import ListJoinPublicChannelsByDay from "./components/join-public-channel-by-day/ListJoinPublicChannelsByDay";
 
 interface GlobalData {
   setLoading: (status: boolean) => void
@@ -44,6 +47,9 @@ export default function App() {
                 <Route path="/trans-logs" element={<RequireAuth><ListTransLogs /></RequireAuth>}/>
                 <Route path="/top-balance" element={<RequireAuth><ListTopSparkBalance /></RequireAuth>}/>
                 <Route path="/top-refer" element={<RequireAuth><ListTopRefer /></RequireAuth>}/>
+                <Route path="/checkin-by-day" element={<RequireAuth><ListCheckInByDay /></RequireAuth>}/>
+                <Route path="/register-by-day" element={<RequireAuth><ListRegisterByDay /></RequireAuth>}/>
+                <Route path="/join-public-channel-by-day" element={<RequireAuth><ListJoinPublicChannelsByDay /></RequireAuth>}/>
             </Routes>
           </BrowserRouter>
         </context.Provider>

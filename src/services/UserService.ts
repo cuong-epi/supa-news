@@ -20,4 +20,19 @@ export default class UserService {
     const { data: response } = await axios.get(`/users/gettoprefer?page_index=${pageIndex}&page_size=${pageSize}`);
     return response;
   }
+
+  getTotalUsersCheckInByDateRange = async (startDate: string, endDate: string) => {
+    const { data: response } = await axios.get(`/users/gettotaluserscheckinbydaterange?start_date=${startDate}&end_date=${endDate}`);
+    return response;
+  }
+
+  getTotalUsersRegisteredByDateRange = async (startDate: string, endDate: string) => {
+    const { data: response } = await axios.get(`/users/gettotalusersregisteredbydaterange?start_date=${startDate}&end_date=${endDate}`);
+    return response;
+  }
+
+  getTotalUsersJoinPublicChannelByDateRange = async (startDate: string, endDate: string) => {
+    const { data: response } = await axios.get(`/users/gettotalusersjoinpublicchannelbydaterange?start_date=${startDate}&end_date=${endDate}`);
+    return response;
+  }
 }
